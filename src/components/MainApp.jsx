@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Users from "./Users";
@@ -6,11 +6,21 @@ import AddUser from "./AddUser";
 
 export default function MainApp() {
 
+
  const [headerData,] = useState("Welcome to header")
  const [footerData] = useState("")
  const [userData,setUserData] = useState([])
 
+ useEffect(()=>{
+   console.log("component started")
+ },[])
+
+ useEffect(()=>{
+   localStorage.setItem("udta",JSON.stringify(userData))
+ },[userData])
+
 const addUser = (data)=>{
+  // console.log(data)
    setUserData([...userData, data])
    
 }

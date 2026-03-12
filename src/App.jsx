@@ -1,18 +1,17 @@
 
 import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import MainApp from './components/MainApp'
+import ContextDemo from './hooksdemo/ContextDemo'
+import EmployeeContext from './hooksdemo/EmployeeContext'
+import HookClient from './hooksdemo/HookClient'
+
+
 
 function App() {
 
   return (
     <>
-    <p>welcome</p>
-    <MainApp/>
-    <hr />
-    <Header/>
-    <Footer/>
+  
+    <EmployeeContext/>
     </>
   )
 }

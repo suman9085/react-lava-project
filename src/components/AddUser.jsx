@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function AddUser(props) {
-    function addUser(e){
+    const  addUser =(e)=>{
         e.preventDefault()
         const data = e.target.elements.uname.value
          props.au(data)
